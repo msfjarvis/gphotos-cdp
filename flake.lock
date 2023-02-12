@@ -31,6 +31,30 @@
         "type": "github"
       }
     },
+    "go2nix": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ],
+        "utils": [
+          "flake-utils"
+        ]
+      },
+      "locked": {
+        "lastModified": 1662501203,
+        "narHash": "sha256-4BKeqCX2zwgBiTdlc2DjGQ0CttKm0vSw0r/bdFdM/PQ=",
+        "owner": "nix-community",
+        "repo": "gomod2nix",
+        "rev": "89cd0675b96775aa3ee86e7c0cf5bc238dd27976",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nix-community",
+        "ref": "master",
+        "repo": "gomod2nix",
+        "type": "github"
+      }
+    },
     "nixpkgs": {
       "locked": {
         "lastModified": 1674990008,
@@ -51,6 +75,7 @@
       "inputs": {
         "flake-compat": "flake-compat",
         "flake-utils": "flake-utils",
+        "go2nix": "go2nix",
         "nixpkgs": "nixpkgs"
       }
     }

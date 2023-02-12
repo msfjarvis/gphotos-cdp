@@ -1,0 +1,30 @@
+schema = 3
+
+[mod]
+  [mod."github.com/chromedp/cdproto"]
+    version = "v0.0.0-20221114202156-f470c7c7306e"
+    hash = "sha256-oK1RZ5X5eK8527a9NT0IwxmvOPR09v6A5wi+L4qMUY0="
+  [mod."github.com/chromedp/chromedp"]
+    version = "v0.8.6"
+    hash = "sha256-r6e+03UxkUIo35ay0l83gF9/mYeN7mmRgE99jW21c+U="
+  [mod."github.com/chromedp/sysutil"]
+    version = "v1.0.0"
+    hash = "sha256-q0D6shGNtlM1EDiSXiysOSj+GKXerywCDHy6bV+Hn20="
+  [mod."github.com/gobwas/httphead"]
+    version = "v0.1.0"
+    hash = "sha256-6wFni/JkK2GqtVs3IW+GxHRNoSu4EJfzaBRGX2hF1IA="
+  [mod."github.com/gobwas/pool"]
+    version = "v0.2.1"
+    hash = "sha256-py8/+Wo5Q83EbYMUKK5U/4scRcyMo2MjOoxqi5y+sUY="
+  [mod."github.com/gobwas/ws"]
+    version = "v1.1.0"
+    hash = "sha256-acKk+P+NtXvrOaT6WhJzI6RLUeB1ejITtGjqabx74pg="
+  [mod."github.com/josharian/intern"]
+    version = "v1.0.0"
+    hash = "sha256-LJR0QE2vOQ2/2shBbO5Yl8cVPq+NFrE3ers0vu9FRP0="
+  [mod."github.com/mailru/easyjson"]
+    version = "v0.7.7"
+    hash = "sha256-NVCz8MURpxgOjHXqxOZExqV4bnpHggpeAOyZDArjcy4="
+  [mod."golang.org/x/sys"]
+    version = "v0.2.0"
+    hash = "sha256-N6yfQH7R2gfcvyWTQZbxWuSNyVy6hAxiab2WFzgAykI="
