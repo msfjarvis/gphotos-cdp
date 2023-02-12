@@ -2,11 +2,11 @@ schema = 3
 
 [mod]
   [mod."github.com/chromedp/cdproto"]
-    version = "v0.0.0-20221114202156-f470c7c7306e"
-    hash = "sha256-oK1RZ5X5eK8527a9NT0IwxmvOPR09v6A5wi+L4qMUY0="
+    version = "v0.0.0-20230208104036-c3c870aa4771"
+    hash = "sha256-fFNBwHayYo+T4jMKN6NrnmHyw7TOcWNaLRc6/04Xp4E="
   [mod."github.com/chromedp/chromedp"]
-    version = "v0.8.6"
-    hash = "sha256-r6e+03UxkUIo35ay0l83gF9/mYeN7mmRgE99jW21c+U="
+    version = "v0.8.7"
+    hash = "sha256-3PaT/RPMgi8+XBSxDEukQ7l8mtT1lCuRnKCzOyEfHZw="
   [mod."github.com/chromedp/sysutil"]
     version = "v1.0.0"
     hash = "sha256-q0D6shGNtlM1EDiSXiysOSj+GKXerywCDHy6bV+Hn20="
@@ -26,5 +26,5 @@ schema = 3
     version = "v0.7.7"
     hash = "sha256-NVCz8MURpxgOjHXqxOZExqV4bnpHggpeAOyZDArjcy4="
   [mod."golang.org/x/sys"]
-    version = "v0.2.0"
-    hash = "sha256-N6yfQH7R2gfcvyWTQZbxWuSNyVy6hAxiab2WFzgAykI="
+    version = "v0.5.0"
+    hash = "sha256-0LTr3KeJ1OMQAwYUQo1513dXJtQAJn5Dq8sFkc8ps1U="

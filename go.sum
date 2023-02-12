@@ -1,8 +1,8 @@
-github.com/chromedp/cdproto v0.0.0-20220924210414-0e3390be1777/go.mod h1:5Y4sD/eXpwrChIuxhSr/G20n9CdbCmoerOHnuAf0Zr0=
-github.com/chromedp/cdproto v0.0.0-20221114202156-f470c7c7306e h1:qRdQFxlyab9G9MSrgV76SIVWY772tQT/InNX6U7VSIU=
-github.com/chromedp/cdproto v0.0.0-20221114202156-f470c7c7306e/go.mod h1:GKljq0VrfU4D5yc+2qA6OVr8pmO/MBbPEWqWQ/oqGEs=
-github.com/chromedp/chromedp v0.8.6 h1:KobeeqR2dpfKSG1prS3Y6+FbffMmGC6xmAobRXA9QEQ=
-github.com/chromedp/chromedp v0.8.6/go.mod h1:nBYHoD6YSNzrr82cIeuOzhw1Jo/s2o0QQ+ifTeoCZ+c=
+github.com/chromedp/cdproto v0.0.0-20230109101555-6b041c6303cc/go.mod h1:GKljq0VrfU4D5yc+2qA6OVr8pmO/MBbPEWqWQ/oqGEs=
+github.com/chromedp/cdproto v0.0.0-20230208104036-c3c870aa4771 h1:ZladAZdeSiSP39W3+usdJ49vvk550MgLBbpf9dTe+qw=
+github.com/chromedp/cdproto v0.0.0-20230208104036-c3c870aa4771/go.mod h1:GKljq0VrfU4D5yc+2qA6OVr8pmO/MBbPEWqWQ/oqGEs=
+github.com/chromedp/chromedp v0.8.7 h1:dYOYc5ynTBzwSLOi+1IfgHwPr8r2BqV48l/RC+3OuJ0=
+github.com/chromedp/chromedp v0.8.7/go.mod h1:iL+ywnwk3eG3EVXV1ackXBMNzdEh3Ye/KHvQkq1KRKU=
 github.com/chromedp/sysutil v1.0.0 h1:+ZxhTpfpZlmchB58ih/LBHX52ky7w2VhQVKQMucy3Ic=
 github.com/chromedp/sysutil v1.0.0/go.mod h1:kgWmDdq8fTzXYcKIBqIYvRRTnYb9aNS9moAV0xufSww=
 github.com/gobwas/httphead v0.1.0 h1:exrUm0f4YX0L7EBwZHuCF4GDp8aJfVeBrlLQrs6NqWU=
@@ -21,5 +21,5 @@ github.com/orisano/pixelmatch v0.0.0-20220722002657-fb0b55479cde h1:x0TT0RDC7UhA
 github.com/orisano/pixelmatch v0.0.0-20220722002657-fb0b55479cde/go.mod h1:nZgzbfBr3hhjoZnS66nKrHmduYNpc34ny7RK4z5/HM0=
 golang.org/x/sys v0.0.0-20201207223542-d4d67f95c62d/go.mod h1:h1NjWce9XRLGQEsW7wpKNCjG9DtNlClVuFLEZdDNbEs=
 golang.org/x/sys v0.0.0-20220928140112-f11e5e49a4ec/go.mod h1:oPkhp1MJrh7nUepCBck5+mAzfO9JrbApNNgaTdGDITg=
-golang.org/x/sys v0.2.0 h1:ljd4t30dBnAvMZaQCevtY0xLLD0A+bRZXbgLMLU1F/A=
-golang.org/x/sys v0.2.0/go.mod h1:oPkhp1MJrh7nUepCBck5+mAzfO9JrbApNNgaTdGDITg=
+golang.org/x/sys v0.5.0 h1:MUK/U/4lj1t1oPg0HfuXDN/Z1wv31ZJ/YcPiGccS4DU=
+golang.org/x/sys v0.5.0/go.mod h1:oPkhp1MJrh7nUepCBck5+mAzfO9JrbApNNgaTdGDITg=
