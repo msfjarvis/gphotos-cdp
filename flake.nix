@@ -1,17 +1,18 @@
 {
-  inputs = {
-    nixpkgs = {url = "github:NixOS/nixpkgs/nixpkgs-unstable";};
-    flake-utils = {url = "github:numtide/flake-utils";};
-    flake-compat = {
-      url = "github:edolstra/flake-compat";
-      flake = false;
-    };
-    go2nix = {
-      url = "github:nix-community/gomod2nix/master";
-      inputs.nixpkgs.follows = "nixpkgs";
-      inputs.utils.follows = "flake-utils";
-    };
-  };
+
+  inputs.nixpkgs.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
+
+  inputs.systems.url = "github:msfjarvis/flake-systems";
+
+  inputs.flake-utils.url = "github:numtide/flake-utils";
+  inputs.flake-utils.inputs.systems.follows = "systems";
+
+  inputs.flake-compat.url = "github:nix-community/flake-compat";
+  inputs.flake-compat.flake = false;
+
+  inputs.go2nix.url = "github:nix-community/gomod2nix/master";
+  inputs.go2nix.inputs.nixpkgs.follows = "nixpkgs";
+  inputs.go2nix.inputs.utils.follows = "flake-utils";
 
   outputs = {
     self,
