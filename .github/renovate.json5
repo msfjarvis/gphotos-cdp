@@ -1,0 +1,20 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": [
+    "config:base",
+    "helpers:pinGitHubActionDigests",
+    "github>msfjarvis/shared-workflows//renovate/automerge"
+  ],
+  "postUpdateOptions": [
+    "gomodMassage",
+    "gomodTidy",
+    "gomodUpdateImportPaths",
+  ],
+  "packageRules": [
+    {
+      "matchManagers": ["gomod"],
+      "matchDepTypes": ["indirect"],
+      "enabled": true
+    }
+  ],
+}
