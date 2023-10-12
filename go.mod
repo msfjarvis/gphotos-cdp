@@ -4,7 +4,7 @@ go 1.17
 
 require (
 	github.com/chromedp/cdproto v0.0.0-20231011050154-1d073bb38998
-	github.com/chromedp/chromedp v0.9.2
+	github.com/chromedp/chromedp v0.9.3
 )
 
 require (
