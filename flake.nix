@@ -12,7 +12,7 @@
 
   inputs.go2nix.url = "github:nix-community/gomod2nix/master";
   inputs.go2nix.inputs.nixpkgs.follows = "nixpkgs";
-  inputs.go2nix.inputs.utils.follows = "flake-utils";
+  inputs.go2nix.inputs.flake-utils.follows = "flake-utils";
 
   outputs = {
     self,
