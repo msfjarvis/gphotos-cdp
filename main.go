@@ -50,6 +50,7 @@ var (
 	runFlag      = flag.String("run", "", "the program to run on each downloaded item, right after it is dowloaded. It is also the responsibility of that program to remove the downloaded item, if desired.")
 	verboseFlag  = flag.Bool("v", false, "be verbose")
 	headlessFlag = flag.Bool("headless", false, "Start chrome browser in headless mode (cannot do authentication this way).")
+	sessDirFlag  = flag.String("session-dir", filepath.Join(os.TempDir(), "gphotos-cdp"), "where to load the profile from in dev mode")
 )
 
 var tick = 500 * time.Millisecond
@@ -123,7 +124,7 @@ func getLastDone(dlDir string) (string, error) {
 func NewSession() (*Session, error) {
 	var dir string
 	if *devFlag {
-		dir = filepath.Join(os.TempDir(), "gphotos-cdp")
+		dir = *sessDirFlag
 		if err := os.MkdirAll(dir, 0700); err != nil {
 			return nil, err
 		}
