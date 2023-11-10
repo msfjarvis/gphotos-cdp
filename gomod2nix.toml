@@ -2,8 +2,8 @@ schema = 3
 
 [mod]
   [mod."github.com/chromedp/cdproto"]
-    version = "v0.0.0-20231108195835-5de19437760b"
-    hash = "sha256-MssowK1xsBU2E8s/H9i43c7siNXgM6XeEnMFgAa3IwQ="
+    version = "v0.0.0-20231114014204-3e458d5176f9"
+    hash = "sha256-aFm2q4thKi+Wfy4WW3AZoHLVjr8/aLMYDwziZczz7wg="
   [mod."github.com/chromedp/chromedp"]
     version = "v0.9.3"
     hash = "sha256-Tw/szwIpD1gnHHEEWpFAPsLH1koizevAItoVAS2H6Mk="
