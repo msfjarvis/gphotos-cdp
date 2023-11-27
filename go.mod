@@ -3,7 +3,7 @@ module github.com/msfjarvis/gphotos-cdp
 go 1.17
 
 require (
-	github.com/chromedp/cdproto v0.0.0-20231114014204-3e458d5176f9
+	github.com/chromedp/cdproto v0.0.0-20231126232103-8e31ff06e23b
 	github.com/chromedp/chromedp v0.9.3
 )
 
