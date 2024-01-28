@@ -1,8 +1,11 @@
 {
-
   inputs.nixpkgs.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
 
   inputs.systems.url = "github:msfjarvis/flake-systems";
+
+  inputs.devshell.url = "github:numtide/devshell";
+  inputs.devshell.inputs.nixpkgs.follows = "nixpkgs";
+  inputs.devshell.inputs.flake-utils.follows = "flake-utils";
 
   inputs.flake-utils.url = "github:numtide/flake-utils";
   inputs.flake-utils.inputs.systems.follows = "systems";
@@ -17,6 +20,7 @@
   outputs = {
     self,
     nixpkgs,
+    devshell,
     flake-utils,
     go2nix,
     ...
@@ -24,7 +28,7 @@
     flake-utils.lib.eachDefaultSystem (system: let
       pkgs = import nixpkgs {
         inherit system;
-        overlays = [go2nix.overlays.default];
+        overlays = [devshell.overlays.default go2nix.overlays.default];
       };
     in {
       packages.default = pkgs.buildGoApplication {
@@ -34,10 +38,22 @@
         src = ./.;
         modules = ./gomod2nix.toml;
       };
-      devShells.default = pkgs.mkShell {
-        nativeBuildInputs = with pkgs; [
+      devShells.default = pkgs.devshell.mkShell {
+        bash = {interactive = "";};
+
+        env = [
+          {
+            name = "DEVSHELL_NO_MOTD";
+            value = 1;
+          }
+        ];
+
+        packages = with pkgs; [
           git
           gomod2nix
+          go-outline
+          gopls
+          gotools
           (mkGoEnv {pwd = ./.;})
         ];
       };
