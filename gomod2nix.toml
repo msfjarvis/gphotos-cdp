@@ -5,8 +5,8 @@ schema = 3
     version = "v0.0.0-20240127002248-bd7a66284627"
     hash = "sha256-NtIRppI0KWVeLtnPGQo1jKPmbkrUMuJ/8ZZIWDRIGZg="
   [mod."github.com/chromedp/chromedp"]
-    version = "v0.9.3"
-    hash = "sha256-Tw/szwIpD1gnHHEEWpFAPsLH1koizevAItoVAS2H6Mk="
+    version = "v0.9.4"
+    hash = "sha256-vj8w+Tt7DhCUTl0BOwuYCBRSi/ghnFg4s22tmIJJIl0="
   [mod."github.com/chromedp/sysutil"]
     version = "v1.0.0"
     hash = "sha256-q0D6shGNtlM1EDiSXiysOSj+GKXerywCDHy6bV+Hn20="
