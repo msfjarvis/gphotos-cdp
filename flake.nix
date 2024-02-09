@@ -50,6 +50,7 @@
 
         packages = with pkgs; [
           git
+          go
           gomod2nix
           go-outline
           gopls
