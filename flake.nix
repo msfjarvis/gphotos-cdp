@@ -58,5 +58,10 @@
           (mkGoEnv {pwd = ./.;})
         ];
       };
-    });
+    })
+    // {
+      overlays.default = final: _: {
+        gphotos-cdp = self.packages.${final.system}.default;
+      };
+    };
 }
