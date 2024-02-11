@@ -37,6 +37,7 @@
         pwd = ./.;
         src = ./.;
         modules = ./gomod2nix.toml;
+        meta = {mainProgram = "gphotos-cdp";};
       };
       devShells.default = pkgs.devshell.mkShell {
         bash = {interactive = "";};
