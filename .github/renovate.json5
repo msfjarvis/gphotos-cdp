@@ -3,7 +3,10 @@
   "extends": [
     "config:base",
     "helpers:pinGitHubActionDigests",
-    "github>msfjarvis/shared-workflows//renovate/automerge"
+  ],
+  "platformAutomerge": true,
+  "repositories": [
+    "msfjarvis/gphotos-cdp"
   ],
   "postUpdateOptions": [
     "gomodMassage",
@@ -15,6 +18,17 @@
       "matchManagers": ["gomod"],
       "matchDepTypes": ["indirect"],
       "enabled": true
+    },
+    {
+      "matchPackagePatterns": [
+        "*"
+      ],
+      "automerge": true,
     }
   ],
+  "postUpgradeTasks": {
+    "commands": ["nix shell --command gomod2nix"],
+    "fileFilters": ["gomod2nix.toml"],
+    "executionMode": "update"
+  },
 }
