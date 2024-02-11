@@ -37,6 +37,7 @@
         pwd = ./.;
         src = ./.;
         modules = ./gomod2nix.toml;
+        meta = {mainProgram = "gphotos-cdp";};
       };
       overlays.default = _: _: {
         gphotos-cdp = self.packages.${system}.default;
