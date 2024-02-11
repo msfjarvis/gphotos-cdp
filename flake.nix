@@ -38,6 +38,9 @@
         src = ./.;
         modules = ./gomod2nix.toml;
       };
+      overlays.default = _: _: {
+        gphotos-cdp = self.packages.${system}.default;
+      };
       devShells.default = pkgs.devshell.mkShell {
         bash = {interactive = "";};
 
