@@ -21,7 +21,7 @@
       "postUpgradeTasks": {
         "commands": ["nix shell --command gomod2nix"],
         "fileFilters": ["gomod2nix.toml"],
-        "executionMode": "update"
+        "executionMode": "branch"
       },
     },
     {
