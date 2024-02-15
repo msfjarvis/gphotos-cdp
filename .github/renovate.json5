@@ -19,7 +19,7 @@
       "matchDepTypes": ["indirect"],
       "enabled": true,
       "postUpgradeTasks": {
-        "commands": ["nix shell --command gomod2nix"],
+        "commands": ["nix develop --command gomod2nix"],
         "fileFilters": ["gomod2nix.toml"],
         "executionMode": "branch"
       },
