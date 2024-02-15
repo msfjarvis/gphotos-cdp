@@ -17,7 +17,12 @@
     {
       "matchManagers": ["gomod"],
       "matchDepTypes": ["indirect"],
-      "enabled": true
+      "enabled": true,
+      "postUpgradeTasks": {
+        "commands": ["nix shell --command gomod2nix"],
+        "fileFilters": ["gomod2nix.toml"],
+        "executionMode": "update"
+      },
     },
     {
       "matchPackagePatterns": [
@@ -26,9 +31,4 @@
       "automerge": true,
     }
   ],
-  "postUpgradeTasks": {
-    "commands": ["nix shell --command gomod2nix"],
-    "fileFilters": ["gomod2nix.toml"],
-    "executionMode": "update"
-  },
 }
