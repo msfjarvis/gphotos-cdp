@@ -2,6 +2,6 @@ module.exports = {
   repositories: [
     "msfjarvis/gphotos-cdp",
   ],
-  allowedPostUpgradeCommands: ["^nix"],
+  allowedPostUpgradeCommands: ["^sudo nix"],
   nix: { enabled: true, },
 }
