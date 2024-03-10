@@ -17,6 +17,17 @@
   inputs.go2nix.inputs.nixpkgs.follows = "nixpkgs";
   inputs.go2nix.inputs.flake-utils.follows = "flake-utils";
 
+  nixConfig = {
+    extra-substituters = [
+      "https://cache.garnix.io"
+      "https://nix-community.cachix.org/"
+    ];
+    extra-trusted-public-keys = [
+      "cache.garnix.io:CTFPyKSLcx5RMJKfLo5EEPUObbA78b0YQ2DTCJXqr9g="
+      "nix-community.cachix.org-1:mB9FSh9qf2dCimDSUo8Zy7bkq5CX+/rkCWyvRCYg3Fs="
+    ];
+  };
+
   outputs = {
     self,
     nixpkgs,
@@ -39,6 +50,7 @@
         modules = ./gomod2nix.toml;
         meta = {mainProgram = "gphotos-cdp";};
       };
+      packages.gomod2nix = go2nix.packages.${system}.default;
       devShells.default = pkgs.devshell.mkShell {
         bash = {interactive = "";};
 
