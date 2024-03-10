@@ -12,11 +12,11 @@
   ],
   "packageRules": [
     {
-      "matchPackagePatterns": [
-        "*",
+      "matchManagers": [
+        "gomod",
       ],
       "postUpgradeTasks": {
-        "commands": ["nix --extra-experimental-features nix-command --extra-experimental-features flakes --option accept-flake-config true --option sandbox false run .#gomod2nix"],
+        "commands": ["sudo nix --extra-experimental-features nix-command --extra-experimental-features flakes --option accept-flake-config true --option sandbox false run .#gomod2nix"],
         "executionMode": "branch",
       },
     }
