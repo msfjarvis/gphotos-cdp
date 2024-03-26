@@ -12,8 +12,6 @@ jobs:
     steps:
       - name: Trigger package bump in dotfiles repo
         run: >
-          gh api repos/msfjarvis/dotfiles/dispatches
-            --field event_type="package-bump"
-            --field client_payload[package_name]="gphotos-cdp"
+          gh api repos/msfjarvis/dotfiles/dispatches --field event_type="package-bump" --field client_payload[package_name]="gphotos-cdp"
         env:
           GITHUB_TOKEN: ${{ secrets.DISPATCH_TOKEN }}
