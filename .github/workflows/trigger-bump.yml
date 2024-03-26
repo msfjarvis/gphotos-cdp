@@ -1,0 +1,19 @@
+name: Trigger Nix package bump
+on:
+  push:
+    tags:
+      - 'v[0-9]+.[0-9]+.[0-9]+'
+permissions:
+  contents: read
+jobs:
+  trigger:
+    name: Trigger
+    runs-on: ubuntu-latest
+    steps:
+      - name: Trigger package bump in dotfiles repo
+        run: >
+          gh api repos/msfjarvis/dotfiles/dispatches
+            --field event_type="package-bump"
+            --field client_payload[package_name]="gphotos-cdp"
+        env:
+          GITHUB_TOKEN: ${{ secrets.DISPATCH_TOKEN }}
