@@ -5,7 +5,6 @@
 
   inputs.devshell.url = "github:numtide/devshell";
   inputs.devshell.inputs.nixpkgs.follows = "nixpkgs";
-  inputs.devshell.inputs.flake-utils.follows = "flake-utils";
 
   inputs.flake-utils.url = "github:numtide/flake-utils";
   inputs.flake-utils.inputs.systems.follows = "systems";
@@ -13,22 +12,22 @@
   inputs.flake-compat.url = "github:nix-community/flake-compat";
   inputs.flake-compat.flake = false;
 
-  inputs.go2nix.url = "github:nix-community/gomod2nix/master";
-  inputs.go2nix.inputs.nixpkgs.follows = "nixpkgs";
-  inputs.go2nix.inputs.flake-utils.follows = "flake-utils";
+  inputs.gomod2nix.url = "github:nix-community/gomod2nix/master";
+  inputs.gomod2nix.inputs.nixpkgs.follows = "nixpkgs";
+  inputs.gomod2nix.inputs.flake-utils.follows = "flake-utils";
 
   outputs = {
     self,
     nixpkgs,
     devshell,
     flake-utils,
-    go2nix,
+    gomod2nix,
     ...
   }:
     flake-utils.lib.eachDefaultSystem (system: let
       pkgs = import nixpkgs {
         inherit system;
-        overlays = [devshell.overlays.default go2nix.overlays.default];
+        overlays = [devshell.overlays.default gomod2nix.overlays.default];
       };
     in {
       packages.default = pkgs.buildGoApplication {
@@ -52,7 +51,7 @@
         packages = with pkgs; [
           git
           go
-          gomod2nix
+          gomod2nix.packages.${system}.default
           go-outline
           gopls
           gotools

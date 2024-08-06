@@ -56,7 +56,7 @@
         "type": "github"
       }
     },
-    "go2nix": {
+    "gomod2nix": {
       "inputs": {
         "flake-utils": [
           "flake-utils"
@@ -101,7 +101,7 @@
         "devshell": "devshell",
         "flake-compat": "flake-compat",
         "flake-utils": "flake-utils",
-        "go2nix": "go2nix",
+        "gomod2nix": "gomod2nix",
         "nixpkgs": "nixpkgs",
         "systems": "systems"
       }
