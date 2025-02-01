@@ -1,5 +1,5 @@
 {
-  inputs.nixpkgs.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
+  inputs.nixpkgs.url = "github:msfjarvis/nixpkgs/nixpkgs-unstable";
 
   inputs.systems.url = "github:msfjarvis/flake-systems";
 
